@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b3658;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* Align chat container to the top */
+    height: 100vh;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;  /* Adjust the height to leave space for the prompt box */
+    background-color: rgb(33, 24, 67);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;  /* Allow scrolling within the chat container */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;  /* Keep the chat at the bottom */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* AI and User Chat Box */
+.ai-chat-box, .user-chat-box {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+
+.ai-chat-box .ai-avatar, .user-chat-box .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.ai-chat-area, .user-chat-area {
+    max-width: 75%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.ai-chat-area {
+    background-color: #f2eaea;
+    color: #333;
+}
+
+.user-chat-area {
+    background-color: black;
+    align-self: flex-end;
+    color: white;
+}
+
+/* Input Area - Prompt Box */
+.prompt-area {
+    position: absolute;  /* Fix the prompt box at the bottom of the screen */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+/* Prompt Input */
+#prompt {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Submit Button */
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Image Upload Button */
+#image input {
+    display: none;
+}
+
+#image img.chooseing {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.chat-container::-webkit-scrollbar{
+    width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track{
+    background:#f1f1f1;
+    border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover{
+    background: #555;
+
+}
